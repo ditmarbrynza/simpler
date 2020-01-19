@@ -1,5 +1,4 @@
 require 'erb'
-require 'pry'
 
 module Simpler
   class View

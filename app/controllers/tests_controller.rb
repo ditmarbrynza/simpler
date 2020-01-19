@@ -1,12 +1,12 @@
 class TestsController < Simpler::Controller
 
   def index
-    # @time = Time.now
-    # @tests = Test.all
+    @time = Time.now
+    @tests = Test.all
     # render 'tests/list'
     # render plain: "Simpler render text!"
-    headers['Content-Type'] = 'text/pdf'
-    status 201
+    # headers['Content-Type'] = 'text/pdf'
+    # status 201
   end
 
   def create

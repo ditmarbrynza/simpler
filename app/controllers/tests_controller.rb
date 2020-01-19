@@ -5,6 +5,7 @@ class TestsController < Simpler::Controller
     # @tests = Test.all
     # render 'tests/list'
     # render plain: "Simpler render text!"
+    headers['Content-Type'] = 'text/pdf'
     status 201
   end
 

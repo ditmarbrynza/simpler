@@ -11,7 +11,7 @@ module Simpler
 
     def render(bind)
       plain = check_plain_template
-      return plain unless plain.nil? 
+      return plain unless plain.nil?
       template = File.read(template_path)
       ERB.new(template).result(bind)
     end
@@ -39,8 +39,8 @@ module Simpler
 
     def template_path
       path =  @template || [controller.name, action].join('/')
-      
-      Simpler.root.join(VIEW_BASE_PATH, "#{path}.html.erb")
+      @env['simpler.template_path'] = "#{path}.html.erb"
+      template_path = Simpler.root.join(VIEW_BASE_PATH, "#{path}.html.erb")
     end
 
   end
